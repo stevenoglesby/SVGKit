@@ -11,4 +11,7 @@
     #else
     static const int ddLogLevel = LOG_LEVEL_WARN;
     #endif
+    
+    #define DDLogCWarn(frmt, ...)    LOG_OBJC_MAYBE(LOG_ASYNC_WARN,    LOG_LEVEL_DEF, LOG_FLAG_WARN,    0, frmt, ##__VA_ARGS__)
+    
 #endif
